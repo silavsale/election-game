@@ -12,7 +12,7 @@ body {
     height: 200px;
     position: absolute;
     top: 100vh;
-    border-radius: 35px;
+    border-radius: 55px;
     box-shadow: 5px 5px 8px 3px #888888;
 
     background-size: cover;
@@ -40,12 +40,28 @@ body {
     background-image: url(../images/120px-Zelen.jpg);
 }
 
+.balloon-nasir {
+    background-image: url(../images/120px-Nasirov.jpg);
+}
+
+.balloon-boiko {
+    background-image: url(../images/120px-Boiko.jpg);
+}
+
+.balloon-bogoslov {
+    background-image: url(../images/120px-Inna_Bohoslovska_9.jpg);
+}
+
+.balloon-vilkul {
+    background-image: url(../images/120px-Vilkul.jpg);
+}
+
 .total-shadow {
-    /*display: none;*/
+    display: none;
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -67,13 +83,29 @@ body {
 }
 
 .lose img {
+    height: 300px;
+    width: 190px;
     border-radius: 30px;
+}
+
+.start img{
+    height: 300px;
+    width: 190px;
+    border-radius: 30px;
+}
+
+.start {
+    display: none;
+}
+
+
+.lose {
+    display: none;
 }
 
 .win {
     display: none;
 }
-
 
 .score-block {
     background: #efefef;
@@ -86,4 +118,49 @@ body {
     position: absolute;
     bottom: 0;
     left: calc(50% - 150px);
+}
+
+.my-sound{
+    position: relative;
+    z-index: 200000;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 8px;
+    background-color: #f40b00;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 12px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
